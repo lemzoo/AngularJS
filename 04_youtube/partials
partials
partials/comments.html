@@ -1,0 +1,25 @@
+<div ng-hide="loading">
+	<h1>{{post.name}}</h1>
+
+	<p>{{post.content}}</p>
+
+	<h3>{{comments.length}} commentaires</h3>
+
+	<div ng-repeat="comment in comments | filter:{content: query} | orderBy: order">
+		<ng-comment></ng-comment>
+		<hr>
+	</div>
+
+	<hr>
+
+	<form ng-submit="addComment()">
+		<h3>Ajouter un commentaire</h3>
+		<div class="form-group">
+			<input class="form-control " type="text" placeholder="username" ng-model="newComment.username">
+		</div>
+
+		<div class="form-group">
+			<input class="form-control" type="text" placeholder="city" ng-model="newComment.city">
+		</div>
+	</form>
+</div>
