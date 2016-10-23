@@ -1,0 +1,21 @@
+<h3>Welcome {{name}}</h3>
+
+<div class="panel panel-default">
+	<p class="panel-heading">Name: {{food.name}}</p>
+
+	<div class="panel-body">
+		<p> Serving Size : {{food.servingSize}}</p>
+		<p> Calories : {{food.calories}}</p>
+		<p> Fat : {{food.fat}}</p>
+		<p> Cholesterol : {{food.fat}}</p>
+		<p> Carbohydrate : {{food.carbohydrate}}</p>
+		<p> Protein : {{food.protein}}</p>
+	</div>
+
+	<div>
+		Calories incorrect? Enter the correct value to update.
+		<input type="number" ng-model="correctCalories"/>
+		<button ng-click="update({foodName:food.name, calories:correctCalories})">Update</button>
+	</div>
+
+</div>

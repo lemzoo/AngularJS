@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>MyLearning Angular JS</title>
+
+	<link href="_bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="_bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<style>
+			.panel{width: 400px};
+	</style>
+</head>
+
+<body>
+	<h1>Using @ to Pass Strings to a Directive Isolate Scope</h1>
+	<div ng-controller="myCtrl">
+	<p>Hi {{name1}}, from outer scope</p>
+	<some-directive some-name="{{name1}}"></some-directive>
+		
+	</div>
+</body>
+</html>
